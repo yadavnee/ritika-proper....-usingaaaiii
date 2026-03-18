@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Ritika Properties, your trusted real estate broker in Vasai-Virar. Learn about our mission, vision, and experienced team.">
+    <title>About Us | Ritika Properties</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-building"></i> Ritika<span>Properties</span>
+            </a>
+            <div class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="properties.html">Properties</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="section" style="background-color: var(--primary-color); color: white; padding: 60px 0; text-align: center;">
+        <div class="container reveal">
+            <h1 style="color: white; font-size: 3rem; margin-bottom: 10px;">About Us</h1>
+            <p style="color: #cbd5e1; font-size: 1.1rem;">Your Trusted Real Estate Partner in Vasai-Virar</p>
+        </div>
+    </section>
+
+    <!-- Company Story -->
+    <section class="section">
+        <div class="container">
+            <div class="split-layout">
+                <div class="split-content reveal">
+                    <h2>Our Story</h2>
+                    <p>Established with a vision to revolutionize the real estate experience in the Vasai-Virar region, Ritika Properties has grown to become a trusted name for homebuyers, investors, and business owners.</p>
+                    <p style="margin-top: 15px;">We understand that buying a property is not just a transaction; it's a life milestone. Our local expertise, transparent dealings, and client-first approach ensure that you find the perfect property without any hassle.</p>
+                    
+                    <div style="margin-top: 30px; display: flex; gap: 30px;">
+                        <div>
+                            <h3 style="color: var(--secondary-color); font-size: 2.5rem;">10+</h3>
+                            <p style="font-weight: 500;">Years of Experience</p>
+                        </div>
+                        <div>
+                            <h3 style="color: var(--secondary-color); font-size: 2.5rem;">1000+</h3>
+                            <p style="font-weight: 500;">Happy Families</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="split-img reveal">
+                    <img src="images/about_team_1773827523746.png" alt="Company Story">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="section" style="background-color: var(--bg-light);">
+        <div class="container">
+            <div class="badges-grid">
+                <div class="badge-item reveal" style="text-align: left; padding: 40px;">
+                    <i class="fa-solid fa-bullseye" style="font-size: 3rem; margin-bottom: 20px;"></i>
+                    <h3 style="margin-bottom: 15px;">Our Mission</h3>
+                    <p style="color: var(--text-light); font-size: 1.05rem;">To provide transparent, honest, and end-to-end real estate solutions that simplify property buying, selling, and renting for our clients in Vasai-Virar.</p>
+                </div>
+                <div class="badge-item reveal" style="text-align: left; padding: 40px;">
+                    <i class="fa-solid fa-eye" style="font-size: 3rem; margin-bottom: 20px;"></i>
+                    <h3 style="margin-bottom: 15px;">Our Vision</h3>
+                    <p style="color: var(--text-light); font-size: 1.05rem;">To be the most trusted and preferred real estate partner in the region, recognized for our integrity, market knowledge, and customer dedication.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+        <div class="container text-center reveal">
+            <h2>Let's Find Your Dream Home</h2>
+            <p style="margin-bottom: 30px;">Get in touch with our experts today.</p>
+            <a href="contact.html" class="btn btn-primary">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">...</footer>
+    <!-- Re-use the exact footer structure, just adding simple include format -->
+    <script>
+        // Copy footer from index structure
+        fetch('index.html').then(r => r.text()).then(html => {
+            const doc = new DOMParser().parseFromString(html, 'text/html');
+            const footer = doc.querySelector('.footer');
+            const floating = doc.querySelector('.floating-actions');
+            document.querySelector('.footer').replaceWith(footer);
+            document.body.appendChild(floating);
+        });
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>

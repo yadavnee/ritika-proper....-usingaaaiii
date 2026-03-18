@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse premium real estate properties in Vasai, Virar, and Nalasopara with Ritika Properties. Flats, Shops, and Plots available.">
+    <title>Property Listings | Ritika Properties</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .filter-bar {
+            background: var(--bg-white);
+            padding: 20px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 40px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            border: 1px solid var(--border-color);
+        }
+        .filter-group {
+            flex: 1;
+            min-width: 200px;
+        }
+        .filter-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+        .filter-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            background: var(--bg-light);
+            font-family: inherit;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-building"></i> Ritika<span>Properties</span>
+            </a>
+            <div class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="properties.html" class="active">Properties</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="section" style="background-color: var(--bg-light);">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Explore Properties</h2>
+                <p>Find your ideal home, commercial space, or investment plot in the Vasai-Virar region.</p>
+            </div>
+
+            <!-- Filter Bar -->
+            <div class="filter-bar reveal">
+                <div class="filter-group">
+                    <label>Location</label>
+                    <select id="filter-location">
+                        <option value="all">All Locations</option>
+                        <option value="vasai">Vasai</option>
+                        <option value="virar">Virar</option>
+                        <option value="nalasopara">Nalasopara</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Property Type</label>
+                    <select id="filter-type">
+                        <option value="all">All Types</option>
+                        <option value="flat">Flat / Apartment</option>
+                        <option value="shop">Commercial Shop</option>
+                        <option value="plot">Plot / Land</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Budget</label>
+                    <select id="filter-budget">
+                        <option value="all">Any Budget</option>
+                        <option value="under-30">Under 30 Lacs</option>
+                        <option value="30-50">30 - 50 Lacs</option>
+                        <option value="over-50">Over 50 Lacs</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Property Grid -->
+            <div class="property-grid" id="property-container">
+            
+                <div class="property-card reveal" data-location="nalasopara" data-type="flat" data-budget="30-50">
+                    <div class="property-img">
+                        <span class="property-tag">For Sale</span>
+                        <img src="images/property_flat_1773827415615.png" alt="Flat">
+                    </div>
+                    <div class="property-content">
+                        <div class="property-price">₹45,00,000</div>
+                        <h3>Luxury 2BHK Flat</h3>
+                        <p class="property-location"><i class="fa-solid fa-location-dot"></i> Yashwant Viva, Nalasopara</p>
+                        <div class="property-features">
+                            <span><i class="fa-solid fa-bed"></i> 2 Beds</span>
+                            <span><i class="fa-solid fa-bath"></i> 2 Baths</span>
+                            <span><i class="fa-solid fa-vector-square"></i> 950 Sq.ft</span>
+                        </div>
+                        <a href="property-details.html" class="btn btn-outline" style="width: 100%; margin-top: 15px;">View Details</a>
+                    </div>
+                </div>
+
+                <div class="property-card reveal" data-location="vasai" data-type="shop" data-budget="over-50">
+                    <div class="property-img">
+                        <span class="property-tag" style="background: var(--primary-color);">Commercial</span>
+                        <img src="images/property_shop_1773827432317.png" alt="Shop">
+                    </div>
+                    <div class="property-content">
+                        <div class="property-price">₹85,00,000</div>
+                        <h3>Premium Showroom Space</h3>
+                        <p class="property-location"><i class="fa-solid fa-location-dot"></i> Evershine City, Vasai</p>
+                        <div class="property-features">
+                            <span><i class="fa-solid fa-shop"></i> Shop</span>
+                            <span><i class="fa-solid fa-road"></i> Main Road</span>
+                            <span><i class="fa-solid fa-vector-square"></i> 400 Sq.ft</span>
+                        </div>
+                        <a href="property-details.html" class="btn btn-outline" style="width: 100%; margin-top: 15px;">View Details</a>
+                    </div>
+                </div>
+
+                <div class="property-card reveal" data-location="virar" data-type="plot" data-budget="under-30">
+                    <div class="property-img">
+                        <span class="property-tag" style="background: #28a745;">Plot</span>
+                        <img src="images/property_plot_1773827509204.png" alt="Plot">
+                    </div>
+                    <div class="property-content">
+                        <div class="property-price">₹20,00,000</div>
+                        <h3>Residential NA Plot</h3>
+                        <p class="property-location"><i class="fa-solid fa-location-dot"></i> Global City, Virar</p>
+                        <div class="property-features">
+                            <span><i class="fa-solid fa-map"></i> NA Plot</span>
+                            <span><i class="fa-solid fa-road"></i> 20ft Road</span>
+                            <span><i class="fa-solid fa-vector-square"></i> 1000 Sq.ft</span>
+                        </div>
+                        <a href="property-details.html" class="btn btn-outline" style="width: 100%; margin-top: 15px;">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Extra sample data -->
+                <div class="property-card reveal" data-location="virar" data-type="flat" data-budget="30-50">
+                    <div class="property-img">
+                        <span class="property-tag">For Sale</span>
+                        <img src="images/hero_banner_1773827398586.png" alt="Flat">
+                    </div>
+                    <div class="property-content">
+                        <div class="property-price">₹42,00,000</div>
+                        <h3>Spacious 1BHK Apartment</h3>
+                        <p class="property-location"><i class="fa-solid fa-location-dot"></i> YK Nagar, Virar</p>
+                        <div class="property-features">
+                            <span><i class="fa-solid fa-bed"></i> 1 Bed</span>
+                            <span><i class="fa-solid fa-bath"></i> 2 Baths</span>
+                            <span><i class="fa-solid fa-vector-square"></i> 650 Sq.ft</span>
+                        </div>
+                        <a href="property-details.html" class="btn btn-outline" style="width: 100%; margin-top: 15px;">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="property-card reveal" data-location="vasai" data-type="flat" data-budget="over-50">
+                    <div class="property-img">
+                        <span class="property-tag">For Sale</span>
+                        <img src="images/property_flat_1773827415615.png" alt="Flat">
+                    </div>
+                    <div class="property-content">
+                        <div class="property-price">₹65,00,000</div>
+                        <h3>Modern 3BHK Flat</h3>
+                        <p class="property-location"><i class="fa-solid fa-location-dot"></i> Vasant Nagari, Vasai</p>
+                        <div class="property-features">
+                            <span><i class="fa-solid fa-bed"></i> 3 Beds</span>
+                            <span><i class="fa-solid fa-bath"></i> 3 Baths</span>
+                            <span><i class="fa-solid fa-vector-square"></i> 1250 Sq.ft</span>
+                        </div>
+                        <a href="property-details.html" class="btn btn-outline" style="width: 100%; margin-top: 15px;">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="property-card reveal" data-location="nalasopara" data-type="shop" data-budget="under-30">
+                    <div class="property-img">
+                        <span class="property-tag" style="background: var(--primary-color);">Commercial</span>
+                        <img src="images/property_shop_1773827432317.png" alt="Shop">
+                    </div>
+                    <div class="property-content">
+                        <div class="property-price">₹28,00,000</div>
+                        <h3>Compact Retail Shop</h3>
+                        <p class="property-location"><i class="fa-solid fa-location-dot"></i> Station Road, Nalasopara</p>
+                        <div class="property-features">
+                            <span><i class="fa-solid fa-shop"></i> Shop</span>
+                            <span><i class="fa-solid fa-road"></i> Market</span>
+                            <span><i class="fa-solid fa-vector-square"></i> 150 Sq.ft</span>
+                        </div>
+                        <a href="property-details.html" class="btn btn-outline" style="width: 100%; margin-top: 15px;">View Details</a>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div id="no-results" style="display: none; text-align: center; padding: 50px 0; font-size: 1.2rem; color: var(--text-light);">
+                <i class="fa-solid fa-magnifying-glass" style="font-size: 3rem; color: #e2e8f0; margin-bottom: 20px;"></i><br>
+                No properties found matching your criteria.
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer Script -->
+    <footer class="footer"></footer>
+    <script>
+        fetch('index.html').then(r => r.text()).then(html => {
+            const doc = new DOMParser().parseFromString(html, 'text/html');
+            const footer = doc.querySelector('.footer');
+            const floating = doc.querySelector('.floating-actions');
+            document.querySelector('.footer').replaceWith(footer);
+            document.body.appendChild(floating);
+        });
+
+        // Simple filtering logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const locFilter = document.getElementById('filter-location');
+            const typeFilter = document.getElementById('filter-type');
+            const budgetFilter = document.getElementById('filter-budget');
+            const cards = document.querySelectorAll('.property-card');
+            const noResults = document.getElementById('no-results');
+
+            function filterProperties() {
+                const loc = locFilter.value;
+                const type = typeFilter.value;
+                const budget = budgetFilter.value;
+                let visibleCount = 0;
+
+                cards.forEach(card => {
+                    const cLoc = card.getAttribute('data-location');
+                    const cType = card.getAttribute('data-type');
+                    const cBudget = card.getAttribute('data-budget');
+                    
+                    const matchLoc = loc === 'all' || loc === cLoc;
+                    const matchType = type === 'all' || type === cType;
+                    const matchBudget = budget === 'all' || budget === cBudget;
+
+                    if (matchLoc && matchType && matchBudget) {
+                        card.style.display = 'block';
+                        visibleCount++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+            }
+
+            locFilter.addEventListener('change', filterProperties);
+            typeFilter.addEventListener('change', filterProperties);
+            budgetFilter.addEventListener('change', filterProperties);
+        });
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>

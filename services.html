@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the services provided by Ritika Properties. From buying and selling flats to commercial leasing and legal documentation in Vasai-Virar.">
+    <title>Services | Ritika Properties</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-building"></i> Ritika<span>Properties</span>
+            </a>
+            <div class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="properties.html">Properties</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="section" style="background-color: var(--primary-color); color: white; padding: 60px 0; text-align: center;">
+        <div class="container reveal">
+            <h1 style="color: white; font-size: 3rem; margin-bottom: 10px;">Our Services</h1>
+            <p style="color: #cbd5e1; font-size: 1.1rem;">Comprehensive Real Estate Solutions</p>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="section">
+        <div class="container">
+            <div class="badges-grid">
+                
+                <div class="badge-item reveal" style="text-align: left; padding: 30px;">
+                    <i class="fa-solid fa-house" style="background: rgba(212, 175, 55, 0.1); width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; border-radius: 50%; margin-bottom: 20px;"></i>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 15px;">Buy & Sell Flats</h3>
+                    <p style="color: var(--text-light);">We help you find the perfect 1BHK, 2BHK, or 3BHK flats within your budget. We also connect sellers with verified genuine buyers quickly.</p>
+                </div>
+                
+                <div class="badge-item reveal" style="text-align: left; padding: 30px;">
+                    <i class="fa-solid fa-building-user" style="background: rgba(212, 175, 55, 0.1); width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; border-radius: 50%; margin-bottom: 20px;"></i>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 15px;">Commercial Properties</h3>
+                    <p style="color: var(--text-light);">Looking for a shop, office space, or showroom? We secure prime commercial locations in high-footfall areas for your business.</p>
+                </div>
+                
+                <div class="badge-item reveal" style="text-align: left; padding: 30px;">
+                    <i class="fa-solid fa-key" style="background: rgba(212, 175, 55, 0.1); width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; border-radius: 50%; margin-bottom: 20px;"></i>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 15px;">Rental Services</h3>
+                    <p style="color: var(--text-light);">We assist landlords in finding reliable tenants and help tenants find well-maintained rental homes and commercial spaces.</p>
+                </div>
+                
+                <div class="badge-item reveal" style="text-align: left; padding: 30px;">
+                    <i class="fa-solid fa-city" style="background: rgba(212, 175, 55, 0.1); width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; border-radius: 50%; margin-bottom: 20px;"></i>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 15px;">New Builder Projects</h3>
+                    <p style="color: var(--text-light);">Direct tie-ups with reputed developers across Vasai-Virar. Get exclusive pre-launch offers with absolutely zero brokerage.</p>
+                </div>
+                
+                <div class="badge-item reveal" style="text-align: left; padding: 30px;">
+                    <i class="fa-solid fa-map-location-dot" style="background: rgba(212, 175, 55, 0.1); width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; border-radius: 50%; margin-bottom: 20px;"></i>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 15px;">Plot & Land Dealing</h3>
+                    <p style="color: var(--text-light);">Invest in NA plots and agricultural lands with clear titles. We conduct thorough site visits and verification.</p>
+                </div>
+                
+                <div class="badge-item reveal" style="text-align: left; padding: 30px;">
+                    <i class="fa-solid fa-file-signature" style="background: rgba(212, 175, 55, 0.1); width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; border-radius: 50%; margin-bottom: 20px;"></i>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 15px;">Legal & Documentation</h3>
+                    <p style="color: var(--text-light);">End-to-end support for property registration, agreement drafting, title search, and home loan processing.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Script -->
+    <footer class="footer"></footer>
+    <script>
+        fetch('index.html').then(r => r.text()).then(html => {
+            const doc = new DOMParser().parseFromString(html, 'text/html');
+            const footer = doc.querySelector('.footer');
+            const floating = doc.querySelector('.floating-actions');
+            document.querySelector('.footer').replaceWith(footer);
+            document.body.appendChild(floating);
+        });
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>
